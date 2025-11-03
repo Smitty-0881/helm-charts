@@ -1,0 +1,4 @@
+apiVersion: v2
+name: obs-prometheus
+version: 0.1.0
+description: Simplified Prometheus placeholder

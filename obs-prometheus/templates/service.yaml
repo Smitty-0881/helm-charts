@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: obs-prometheus
+spec:
+  selector:
+    app: obs-prometheus
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 9090
+      nodePort: {{ .Values.service.nodePort }}
+  type: {{ .Values.service.type }}
