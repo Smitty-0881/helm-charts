@@ -1,0 +1,4 @@
+apiVersion: v2
+name: svc-http-echo
+version: 0.1.0
+description: A simple HTTP echo service

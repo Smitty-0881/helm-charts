@@ -1,0 +1,8 @@
+image:
+  repository: jpillora/dnsmasq
+  tag: "latest"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 53
+  protocol: UDP

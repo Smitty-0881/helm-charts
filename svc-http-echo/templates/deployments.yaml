@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "svc-http-echo.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: svc-http-echo
+  template:
+    metadata:
+      labels:
+        app: svc-http-echo
+    spec:
+      containers:
+      - name: svc-http-echo
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        args: {{ toYaml .Values.args | nindent 10 }}
+        ports:
+        - containerPort: 5678

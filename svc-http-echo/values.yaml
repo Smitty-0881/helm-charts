@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: hashicorp/http-echo
+  tag: "0.2.3"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 31080
+
+args:
+  - "-text=Hello from svc-http-echo"
