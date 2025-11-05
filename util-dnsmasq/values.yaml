@@ -4,5 +4,5 @@ image:
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
-  port: 53
+  port: 55
   protocol: UDP
